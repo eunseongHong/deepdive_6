@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/a7a61466fb.js" crossorigin="anonymous"></script>
+
+    <style>
+        /* reset */
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .popup-container{
+            width: 350px;
+            height: 200px;
+            border: 1px solid #000;
+            border-radius: 20px;
+            box-shadow: rgba(0, 0, 255, 0.35) 0px 5px 15px;
+            padding: 30px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>DEEP DIVE</h1>
+    <button type="button" class="open-popup">
+        레이어 팝업 열기
+    </button>
+    <section class="popup-container">
+    <h2>Popup Title</h2>
+    <div class="contents">
+        여기에는 팝업내용이 들어옵니다.
+    </div>
+
+    <button type="button" class="close-popup">
+        <span>팝업창 닫기</span>
+        <i class="fa-solid fa-xmark"></i>
+    </button>
+    </section>
+
+    <script>
+       const openBtn = document.querySelector('.open-popup')
+       const popup = document.querySelector('.popup-container')
+       const closeBtn = document.querySelector('.close-popup')
+
+       openBtn.addEventListener('click', () => {console.log('clicked!')
+        popup.style.display = "block"})
+
+        closeBtn.addEventListener('click', () => {console.log('clicked!')
+        popup.style.display = "none"
+       })
+    </script>
+</body>
+</html>

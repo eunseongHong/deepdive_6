@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/a7a61466fb.js" crossorigin="anonymous"></script>
+    <style>
+       body{
+        background: #f4f7fb;
+        padding: 20px;
+        margin; 0: 
+        font-family: Arial, sans-serif;
+       }
+
+       .card{
+           display: flex;
+           align-items: flex-start;
+           background: white;
+           color: inherit;
+           border-radius: 12px;
+           padding: 16px;
+           max-width: 300px;
+           text-decoration: none;
+           box-shadow: 0 5px 0px rgba(0, 0, 0, 0.05);
+           transition: box-shadow 0.3s ease;
+        }
+        /*그림처럼 보이지만 폰트. 폰트 사이즈나 폰트 컬러로 조절해야됨*/
+
+        .card:hover{
+            box-shadow: 0 5px 0px rgba(0, 0, 128, 0.6)
+        }
+       .number{
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: #2b7be3;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        margin-right: 12px;
+       }
+
+       .text-wrap span{
+        display: block;
+       }
+
+       .title{
+        font-size: 16px;
+        font-weight: bold;
+       }
+       
+       .subtitle{
+        font-size: 13px;
+        color: gray;
+       }
+        
+    </style>
+</head>
+<body>
+    <a href="#" class="card">
+        <span class="number">1</span>
+        <span class="text-wrap">
+            <span class="title">Basics</span>
+        <span class="text">Out-of-the-box</span>
+        </span>
+    </a>
+</body>
+</html>
