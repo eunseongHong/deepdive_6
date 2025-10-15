@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex 이해하ㅓ기</title>
+
+    <style>
+        .container{
+            width: 400px;
+            outline: 1px solid red;
+            /* margin-top: 100px;
+            margin-left: auto;
+            margin-right: auto; */
+
+            margin: 100px auto; 
+            /* 상하 좌우 */
+            display: flex; 
+
+            /* flex-wrap: wrap; 줄 바꿈 허용, 요소가 많으면 줄 바꿈을 자연스럽게 하기 위해 사용 */
+            /* gap: 10px 50px;
+            flex-direction: column; */
+
+    
+        }
+
+        footer{
+            background-color: gold;
+        }
+       
+       
+        .a{
+            flex-basis: 150px;
+            order: 3;
+        }
+        
+
+        .b{
+            flex-basis: 150px;
+            order: 1;
+        }
+
+        .c{
+            flex-basis: 150px;
+            flex-shrink: 0; /* 줄어들지 않도록 고정 */
+            order: 2;
+        }
+
+        .container div:nth-child(odd){
+            background-color: tomato;
+        }
+         /* : 가상 클래스 선택자 앞에있는 div 태그가 누군가의 n번 째 자식일때, 의미 */
+
+        .container div:nth-child(even){
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+<body>
+    
+<div class="container">
+    <img src="./images/ghost_n1.png" alt="" class="a">
+    <img src="./images/ghost_n2.png" alt="" class="b">
+    <img src="./images/ghost_n3.png" alt="" class="c">
+      <!-- <img src="./images/ghost_n4.png" alt="">
+      <img src="./images/ghost_n5.png" alt="">
+      <img src="./images/ghost_n6.png" alt=""> -->
+  </div>
+
+  <div class="container">
+    <div class="a">A</div>
+    <div class="b">B</div>
+    <div class="c">C</div>
+   
+  </div>
+  <footer>FOOTER</footer>
+
+</body>
+</html>

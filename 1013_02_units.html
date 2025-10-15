@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Units</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+
+        html{
+            font-size: 12px;
+        }
+
+        div{
+            width: 50vw;
+            height: 80vh;
+            background-color: goldenrod;
+            font-size: 50px;
+        }
+
+        h1{
+            background-color: tomato;
+            width: 50%;
+            font-size: 2em; /* 부모 글자 크기의 2배 */
+            margin-bottom: 1em;
+        }
+
+        p{
+            font-size: 5vw;  /* vw: 자신의 화면 (강사님 화면 800px) 기준 */
+            color: green;
+        }
+
+        span{
+            font-size: 2rem; /* root를 기준으로 빠르게 폰트 사이즈를 변경하기 위해서 사용 */
+            color: rgb(88, 43, 223);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Heading 1<span>Mango</span></h1>
+    <p>
+        Hello <span>World</span>
+    </p>
+    <span>
+        SPAN <span>Banana</span>
+    </span>
+    
+    <div>
+        <h1>H1 - Div</h1>
+    </div>
+
+
+    <hr>
+        픽셀(px)-> 고정값
+        --- 상대값(가변크기) --퍼센트 (8) -> 부모를 기준(크기, 글자크기)
+        em-> 부모의 글자크기를 기준 
+        rem -> ROOT의 글자크기를 기준 
+        V, vh -> view port 기준
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+input[type="checkbox"] {
+  border: none;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  vertical-align: middle;
+  outline: 0;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  /* -moz-appearance: none;
+  -o-appearance: none;
+  -ms-appearance: none; */
+  margin-right: 8px;
+}
+
+input[type="checkbox"] {
+  background: transparent url("../images/icons/circle-uncheck.svg") no-repeat center center;
+}
+
+input[type="checkbox"]:checked {
+  background-image: url("../images/icons/circle-check.svg");
+}
