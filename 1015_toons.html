@@ -3,22 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>toons</title>
     <link rel="stylesheet" href="./css/reset.css">
-    <style>
-        background-image:url("../images/");
-    </style>
+    <link rel="stylesheet" href="./css/toon_style.css">
 </head>
 <body>
-    <nav>
-        <ul class="menu">
-            <li><a href="#">COMPANY</a></li>
-            <li><a href="#">CAREERS</a></li>
-            <li><a href="#">CONTACT</a></li>
-            <li><a href="#">MEDIA</a></li>
-            <li><a href="#">IMPACT</a></li>
-        </ul>
-    </nav>
-   
+    <header id="header">
+        <div id="nav-container">
+        <div class="logo">
+               EUN<br>WEBTOON
+        </div>
+        <nav class="nav-links">
+                <ul class="menu">
+                    <li><a href="#" class="active">COMPANY</a></li>
+                    <li><a href="#">CAREERS</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="#">MEDIA</a></li>
+                    <li><a href="#">IMPACT</a></li>
+                </ul>
+        </nav>
+ </header><!--header end-->
+
+ <main>
+    <section class="text">
+        <h1>EUN WEBTOON</h1>
+        <h2>매일매일 새로운 재미,가장 가까운 즐거움을 만듭니다.</h2>
+        <p>
+            한국을 대표하는 검색 포털 네이버의 작은 서비스 중 하나로 시작한 네이버 웹툰은 기존 만화 시장의 창작과 소비 문화 전반을 혁신하고,
+            이전에 없었던 창작 생태계를 만들어왔습니다. 더욱 빠르게 재미있게 좌충우돌하며, 한국은 물론 전세계의 독자를 만나고자 2017년 5월,
+            네이버의 자회사로 독립하여 새로운 모험을 시작하였습니다.
+
+            앞으로도 혁신과 실험을 거듭하며 변화하는 트렌드에 발맞춘, 놀랍고 강력한 콘텐츠를 만들어내는 한편
+            전세계의 다양한 작가들과 독자들이 즐겁게 만날 수 있는 플랫폼으로 거듭나고자 합니다.
+        </p>
+    </section>
+ </main>
+ <script>
+    window.addEventListener('scroll', function(){
+        const header = document.querySelector('#header');
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+        
+    })
+ </script>
 </body>
 </html>

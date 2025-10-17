@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Basic</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Cappuchino Latte</h1>
+        <h2>부드러운 거품의 카푸치노를 만나보세요</h2>
+
+        <p class="price">4500</p>
+
+        <h3>수량을 선택하세요</h3>
+        <div class="count-container">
+            <button type="button" id="decrease">-</button>
+            <span id="number">1</span>
+            <button type="button" id="increase">+</button>
+        </div>
+
+        <button type="button" id="order">Add to Order</button>
+
+        <div class="total-container">
+            <h4>Total price</h4>
+            <strong id="price-total">0</strong>
+        </div>
+    </div>
+
+    <script>
+        // 변수초기화
+        const decrease = document.getElementById('decrease');
+        const increase = document.getElementById('increase');
+        const order = document.getElementById('order');
+        const num = document.getElementById('number');
+        const unitPrice = document.querySelector('.price');
+        const totalPrice = document.querySelector('#price-total');
+        
+
+
+        //기본 값 설정
+        let price = 4500; //1잔 가격
+        let count = 1; //초기 수량
+
+
+        //페이지 처음 로드 시 표시 초기화
+        unitPrice.textContent = price;
+        num.textContent = count;
+        totalPrice.textContent = price * count;
+
+
+
+        // ===== 수량 감소 =====
+
+        decrease.addEventListener('click', () => {
+            if (count > 1) {        // 수량이 1보다 클 때만 감소
+                count = count - 1; //count에서 1을 뺀다
+                num.textContent = count; // 화면에 표시
+            }
+            else{
+            alert('1개 이하로는 주문할 수 없습니다.')
+            }
+        })
+
+
+        // ===== 수량 증가 =====
+        
+        increase.addEventListener('click', () => {
+            count = count + 1; //count에서 1을 더한다
+            num.textContent = count; // 화면에 표시
+        })
+        
+        // 주문 버튼
+        order.addEventListener('click', () => {
+            totalPrice.textContent = price * count // 총합 계산
+            alert('총 주문 금액은' + totalPrice.textContent + '원 입니다.');
+        });
+    </script>
+</body>
+
+</html>
