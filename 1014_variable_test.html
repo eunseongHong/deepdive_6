@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS로 CSS 변수 제어하기</title>
+
+    <style>
+        /* ✅ 1. CSS 변수 정의 */
+        :root{
+            --main-color: #04aa6d;
+            --bg-color: #f5f5f5;
+            --text-color: #222;
+        }
+
+        body{
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Pretendard', sans-serif;
+            transition: 0.4s;
+        }
+
+        h1{
+            color: var(--main-color);
+        }
+
+        button{
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: none;
+            background: var(--main-color);
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        button:hover{
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎨 CSS 변수를 제어하기</h1>
+    <p>버튼을 누르면 색상이 바뀝니다.</p>
+    <button id="toggle">테마 변경</button>
+
+    <script>
+    // ✅ 2. :root 선택 (문서 전체의 CSS 변수 영역)
+    const root = document.documentElement;
+
+    // ✅ 3. 버튼 선택
+    const btn = document.getElementById('toggle');
+
+    // ✅ 4. 상태 저장용 변수
+    let isDark = false;
+
+    // ✅ 5. 버튼 클릭 시 CSS 변수 변경
+    btn.addEventListener('click', () => {
+        if(!isDark){
+             // 🌙 다크 모드 색상 적용
+             root.style.setProperty('--main-color', '#9b59b6');
+             root.style.setProperty('--bg-color', '#222');
+             root.style.setProperty('--text-color', '#f5f5f5');
+             isDark = true;
+            btn.textContent = '☀️ 라이트 모드로 전환';
+        } else{
+            // ☀️ 라이트 모드 색상 적용
+            root.style.setProperty('--main-color', '#04aa6d');
+            root.style.setProperty('--bg-color', '#f5f5f5');
+            root.style.setProperty('--text-color', '#04aa6d');
+            isDark = false;
+            btn.textContent = '🌙 다크 모드로 전환';
+        }
+    });
+    </script>
+</body>
+</html>
