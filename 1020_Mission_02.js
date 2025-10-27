@@ -1,6 +1,11 @@
 // 06 - 사각형의 둘레를 구하는 함수를 만드세요(가로, 세로 입력받기)
 
+function getRectArea(x, y, z){
+    const result = x + y * z;
+    console.log(`가로 ${x}cm, 세로 ${y}cm인 사각형의 둘레는 ${result}입니다.`);
+}
 
+getRectArea(10, 6, 2);
 
 
 
